@@ -4,6 +4,9 @@
     <title>Glitchy</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="game_style.css">
+    <script src="game_script.js"></script>
+    <audio src="musik%2520og%2520lyde/Sang_til_dit_game.mp3" type="audio/mp3"></audio>
 </head>
 
 
@@ -125,7 +128,114 @@
     </div>
 
     <div id="spil">
-    <!--spilkode-->
+        <!--spilkode-->
+        <div id="screen">
+
+            <div id="game">
+
+                <div id="sounds">
+                    <audio src="sounds/oink_high_pitch.mp3" id="oink"></audio>
+                    <audio src="sounds/Sang_til_dit_game.mp3" id="musik"></audio>
+                    <audio src="sounds/losing.mp3" id="losing"></audio>
+                    <audio src="sounds/winning.mp3" id="winning"></audio>
+                    <audio src="sounds/raptorgrowl.mp3" id="raptor_dead"></audio>
+                </div>
+
+                <div id="game_background">
+                </div>
+
+                <div id="game_elements">
+
+                    <div id="player_container">
+                        <div id="player_sprite">
+                        </div>
+                    </div>
+
+                    <div id="neutral_container0">
+                        <div id="neutral_sprite0">
+                        </div>
+                    </div>
+
+                    <div id="neutral_container1">
+                        <div id="neutral_sprite1">
+                        </div>
+                    </div>
+
+                    <div id="neutral_container2">
+                        <div id="neutral_sprite2">
+                        </div>
+                    </div>
+
+                    <div id="neutral_container3">
+                        <div id="neutral_sprite3">
+                        </div>
+                    </div>
+
+                    <div id="neutral_container4">
+                        <div id="neutral_sprite4">
+                        </div>
+                    </div>
+
+                    <div id="enemy_container0">
+                        <div id="enemy_sprite0">
+                        </div>
+                    </div>
+
+                    <div id="enemy_container1">
+                        <div id="enemy_sprite1">
+                            <div id="enemy_innerSprite1"></div>
+                        </div>
+                    </div>
+
+                    <div id="enemy_container2">
+                        <div id="enemy_sprite2">
+                            <div id="enemy_innerSprite2"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="game_ui">
+
+                    <div id="score_container">
+                        <div id="score_board">
+                        </div>
+                    </div>
+
+                    <div id="energy_container">
+                        <div id="energy_board" class="">
+                        </div>
+                    </div>
+
+                    <div id="time_container">
+                        <div id="time_board">
+                        </div>
+                    </div>
+
+                    <div id="easyMode"></div>
+
+                    <div id="mediumMode"></div>
+
+                    <div id="hardMode"></div>
+
+                </div>
+
+                <div id="game_foreground">
+                </div>
+
+            </div>
+
+            <div id="start">
+                <div id="startButton"></div>
+            </div>
+            <div id="game_over">
+                <div id="restartButton_gameOver"></div>
+            </div>
+            <div id="level_complete">
+                <div id="restartButton_levelComplete"></div>
+            </div>
+
+        </div>
     </div>
 
 </section>

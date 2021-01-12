@@ -27,6 +27,8 @@ img {
     grid-column: 2;
 }
 
+#spil {}
+
 /*Tema 4*/
 #flex_container {
     display: flex;

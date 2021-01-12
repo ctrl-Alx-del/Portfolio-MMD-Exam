@@ -1,0 +1,589 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#screen {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+
+    overflow: hidden;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(svg/Startsk%C3%A6rm.svg);
+}
+
+#startButton {
+    position: absolute;
+    height: 9vw;
+    width: 19vw;
+    left: 43vw;
+    bottom: 1vw;
+    cursor: pointer;
+}
+
+#restartButton_gameOver {
+    position: absolute;
+    height: 7vw;
+    width: 18vw;
+    left: 42vw;
+    bottom: 31vw;
+    cursor: pointer;
+
+    /*
+    background-color: aqua;*/
+    z-index: 2;
+}
+
+#restartButton_levelComplete {
+    position: absolute;
+    height: 9vw;
+    width: 23vw;
+    left: 23vw;
+    bottom: 12vw;
+    cursor: pointer;
+
+    /*
+    background-color: aqua;*/
+    z-index: 2;
+}
+
+#game_background {
+    background-image: url(svg/Spilsk%C3%A6rm.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#game_over {
+    background-image: url(svg/Slutsk%C3%A6rm%20tabt.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    z-index: 1;
+}
+
+#level_complete {
+    background-image: url(svg/Slutsk%C3%A6rm%20vundet.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+#enemy_sprite0 {
+    background-image: url(svg/raptor.svg);
+    width: 23vw;
+    height: 24vw;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+}
+
+#enemy_sprite1 {
+    background-image: url(svg/raptor.svg);
+    width: 23vw;
+    height: 24vw;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+}
+
+#enemy_sprite2 {
+    background-image: url(svg/raptor.svg);
+    width: 23vw;
+    height: 24vw;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+}
+
+#enemy_container0 {
+    position: absolute;
+    top: 32vw;
+    left: 101vw;
+}
+
+#enemy_container1 {
+    position: absolute;
+    top: 32vw;
+    left: 101vw;
+}
+
+#enemy_container2 {
+    position: absolute;
+    top: 32vw;
+    left: 101vw;
+}
+
+
+.fadingDown {
+    animation: fading_kf 3s;
+    /* backwards gør at animationen går tilbage til start igen */
+    animation-fill-mode: backwards;
+}
+
+.fadingUp {
+    animation: fadingUp_kf 2s;
+    animation-fill-mode: backwards;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+@keyframes fading_kf {
+    from {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0%;
+        transform: scale(0);
+    }
+}
+
+.pausing {
+    animation-play-state: paused;
+}
+
+
+@keyframes fadingUp_kf {
+    from {
+        transform: scale(1);
+        opacity: 100%;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0%;
+    }
+}
+
+#neutral_container0 {
+    position: absolute;
+    right: -15vw;
+}
+
+#neutral_container1 {
+    position: absolute;
+    right: -15vw;
+}
+
+#neutral_container2 {
+    position: absolute;
+    right: -15vw;
+}
+
+#neutral_container3 {
+    position: absolute;
+    right: -15vw;
+}
+
+#neutral_container4 {
+    position: absolute;
+    right: -15vw;
+}
+
+#neutral_sprite0 {
+    background-image: url(svg/Flyvende%20gris.svg);
+    width: 14.8vw;
+    height: 10vw;
+}
+
+#neutral_sprite1 {
+    background-image: url(svg/Flyvende%20gris.svg);
+    width: 14.8vw;
+    height: 10vw;
+}
+
+#neutral_sprite2 {
+    background-image: url(svg/Flyvende%20gris.svg);
+    width: 14.8vw;
+    height: 10vw;
+}
+
+#neutral_sprite3 {
+    background-image: url(svg/Flyvende%20gris.svg);
+    width: 14.8vw;
+    height: 10vw;
+}
+
+#neutral_sprite4 {
+    background-image: url(svg/Flyvende%20gris.svg);
+    width: 14.8vw;
+    height: 10vw;
+}
+
+.rightToLeftMovingGris {
+    /* animation: rtl_kf 10s 1;*/
+    animation-name: rtlg_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.rightToLeftMovingRaptor {
+    /* animation: rtl_kf 10s 1;*/
+    animation-name: rtlr_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.leftToRightMovingRaptor {
+    /* animation: rtl_kf 10s 1;*/
+    animation-name: ltrr_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+/*.flip {
+    animation-name: flip_kf;
+    animation-iteration-count: 1;
+}*/
+
+#player_container {
+    position: absolute;
+    top: 6vw;
+    left: 100vw;
+}
+
+#player_sprite {
+    background-image: url(svg/%C3%98glen.svg);
+    width: 19vw;
+    height: 12vw;
+}
+
+/*@keyframes flip_kf {
+    from {
+        transform: scaleX(1, -1);
+    }
+}*/
+
+@keyframes rtlg_kf {
+    from {
+        transform: translateX(0vw);
+    }
+
+    to {
+        transform: translateX(-110vw);
+    }
+}
+
+/* TODO: Fiddle lidt rundt med antallet af hop og hvor hurtigt den bevæger sig henover skærmen. */
+@keyframes rtlr_kf {
+    0% {
+        /*
+        right: 0vw;
+*/
+        transform: translateX(0vw);
+
+    }
+
+    10% {
+        top: 5vw;
+    }
+
+    20% {
+        top: 32vw;
+    }
+
+    30% {
+        top: 5vw;
+    }
+
+    40% {
+        top: 32vw;
+    }
+
+    50% {
+        top: 5vw;
+    }
+
+    60% {
+        top: 32vw;
+    }
+
+    70% {
+        top: 5vw;
+    }
+
+    80% {
+        top: 32vw;
+    }
+
+    90% {
+        top: 5vw;
+    }
+
+    100% {
+        transform: translateX(-130vw);
+
+        /*
+        left: -130vw;
+*/
+    }
+
+    /*from {
+    transform: translateX(0vw);
+}
+
+to {
+    transform: translateX(-130vw);
+}*/
+}
+
+@keyframes ltrr_kf {
+    0% {
+        left: -130vw;
+    }
+
+    10% {
+        top: 5vw;
+    }
+
+    20% {
+        top: 32vw;
+    }
+
+    30% {
+        top: 5vw;
+    }
+
+    40% {
+        top: 32vw;
+    }
+
+    50% {
+        top: 5vw;
+    }
+
+    60% {
+        top: 32vw;
+    }
+
+    70% {
+        top: 5vw;
+    }
+
+    80% {
+        top: 32vw;
+    }
+
+    90% {
+        top: 5vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+}
+
+
+@keyframes komet_kf {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+#energy_container {
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+    z-index: 5;
+    pointer-events: none;
+}
+
+#energy_board {}
+
+#score_board {
+    position: absolute;
+    font-family: "CCClobberinTimeCrunchy";
+    color: #C1272D;
+    font-size: 7vw;
+    left: 9vw;
+    top: -1vw;
+    pointer-events: none;
+}
+
+#score_container {
+    position: absolute;
+    top: 3vw;
+    left: 76vw;
+    background-image: url(svg/bacon_points.svg);
+    width: 8.5vw;
+    height: 4.3vw;
+    pointer-events: none;
+}
+
+#time_container {
+    background-image: url(svg/komet_timer_outline.svg);
+    position: absolute;
+    width: 6vw;
+    height: 7.4vw;
+    top: 1vw;
+    left: 93vw;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#time_board {
+    background-image: url(svg/komet_timer_fill.svg);
+    width: 6vw;
+    height: 7.4vw;
+    transform-origin: right top;
+    pointer-events: none;
+}
+
+.timeScale {
+    animation-name: komet_kf;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.liv3 {
+    background-image: url(svg/livhoved%20fuld.svg);
+    width: 15vw;
+    height: 16vw;
+}
+
+.liv2 {
+    background-image: url(svg/livhoved_2_liv.svg);
+    width: 15vw;
+    height: 16vw;
+}
+
+.liv1 {
+    background-image: url(svg/livhoved_1_liv.svg);
+    width: 15vw;
+    height: 16vw;
+}
+
+.liv0 {
+    background-image: url(svg/livhoved_0_liv.svg);
+    width: 15vw;
+    height: 15.5vw;
+}
+
+/* Venstre side */
+.pos0Raptor {
+    left: 101vw;
+}
+
+/* Højre side */
+.pos1Raptor {
+    left: -5vw;
+}
+
+.pos0Gris {
+    top: 10vw;
+}
+
+.pos1Gris {
+    top: 20vw;
+}
+
+.pos2Gris {
+    top: 30vw;
+}
+
+.pos3Gris {
+    top: 40vw;
+}
+
+.pos4Gris {
+    top: 50vw;
+}
+
+
+.hide {
+    visibility: hidden;
+}
+
+.clickThrough {
+    pointer-events: none;
+}
+
+.show {
+    visibility: visible;
+}
+
+#easyMode {
+    position: absolute;
+    height: 9vw;
+    width: 19vw;
+    left: 38vw;
+    bottom: 12vw;
+    cursor: pointer;
+    background-color: aqua;
+    z-index: 2;
+}
+
+#mediumMode {
+    position: absolute;
+    height: 9vw;
+    width: 19vw;
+    left: 59vw;
+    bottom: 12vw;
+    cursor: pointer;
+    background-color: aqua;
+    z-index: 2;
+}
+
+#hardMode {
+    position: absolute;
+    height: 9vw;
+    width: 19vw;
+    left: 80vw;
+    bottom: 12vw;
+    cursor: pointer;
+    background-color: aqua;
+    z-index: 2;
+}
+
+.difficulty_level_1 {
+    animation-duration: 5s;
+}
+
+.difficulty_level_2 {
+    animation-duration: 10s;
+}
+
+.difficulty_level_3 {
+    animation-duration: 20s;
+}
+
+.defaultTime {
+    animation-duration: 45s;
+}
+
+.neutralEasy {
+    animation-duration: 4s;
+
+}
+
+.neutralMedium {
+    animation-duration: 2s;
+}
+
+.neutralHard {
+    animation-duration: 1s;
+}
+
+.neutralDefault {
+    animation-duration: 3s;
+}
