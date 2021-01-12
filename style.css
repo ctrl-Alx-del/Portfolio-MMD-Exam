@@ -27,6 +27,15 @@ img {
     grid-column: 2;
 }
 
+/*Tema 4*/
+#flex_container {
+    display: flex;
+}
+
+.slim {
+    width: 30%;
+}
+
 body {}
 
 main {}
