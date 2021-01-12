@@ -100,4 +100,14 @@ body {}
 
 main {}
 
+/*Navigation*/
+.backToTop {
+    font-family: 'px437_ibm_vga_8x16-webfont';
+    font-size: 1.5rem;
+    position: fixed;
+    left: 20px;
+    bottom: 5px;
+}
+
+/*Responsivitet*/
 @mediaquery (min-width: 500px) {}
