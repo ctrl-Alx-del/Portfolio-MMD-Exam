@@ -6,12 +6,59 @@
     color: white;
 }
 
-img {
-    width: 100%;
+/*fonts*/
+@font-face {
+    font-family: 'px437_ibm_vga_8x16-webfont';
+
+    src: url(fonts/px437_ibm_vga_8x16-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'cfglitchcity-regular-webfont';
+
+    src: url('fonts/cfglitchcity-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'cracked_code-webfont';
+
+    src: url('fonts/cracked_code-webfont.woff') format('woff');
+}
+
+h2,
+h3 {
+    font-family: 'cracked_code-webfont';
+    text-transform: uppercase;
 }
 
 h1 {
-    font-family: 'CF Glitch City';
+    font-family: 'cfglitchcity-regular-webfont';
+    font-size: 10rem;
+    text-align: center;
+    margin: 3rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem;
+}
+
+h3 {
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+p,
+li {
+    font-family: 'px437_ibm_vga_8x16-webfont';
+    font-size: 1.5rem;
+}
+
+
+/*media*/
+img {
+    width: 100%;
 }
 
 #splash_video {
@@ -19,12 +66,13 @@ h1 {
     height: 100%;
 }
 
-/*tema 2*/
-#Tema_2 {}
-
+/*Layout*/
 .wide_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 50px;
+    padding: 50px;
+    grid-gap: 50px;
 }
 
 .col_1 {
@@ -36,6 +84,8 @@ h1 {
 }
 
 #spil {}
+
+#Tema_2 {}
 
 /*Tema 4*/
 #flex_container {
