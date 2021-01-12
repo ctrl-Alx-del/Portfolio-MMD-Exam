@@ -14,6 +14,10 @@ h1 {
     font-family: 'CF Glitch City';
 }
 
+#splash_video {
+    width: 100%;
+    height: 100%;
+}
 
 /*tema 2*/
 #Tema_2 {}
