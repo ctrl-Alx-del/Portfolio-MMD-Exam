@@ -4,10 +4,12 @@ var newImg = 0;
 curImg = 1; //the current image number
 newImg = 0; //the upcoming images number
 
-//hiides all other images
+//hides all other images
 document.querySelector("#image2").classList.add("gem");
 document.querySelector("#image3").classList.add("gem");
 document.querySelector("#image4").classList.add("gem");
+document.querySelector("#image5").classList.add("gem");
+document.querySelector("#image6").classList.add("gem");
 
 
 document.querySelector("#next_button").addEventListener("click", nextImage);
@@ -17,26 +19,26 @@ function nextImage() {
     //remove eventlisteners
     document.querySelector("#next_button").removeEventListener("click", nextImage);
     //if conditions that make sure the curimg value and newimg value stays in the range 1-6.
-    if (curImg < 4) {
-        console.log("if current is less than 3, new is current + 1");
+    if (curImg < 6) {
+        console.log("if current is less than 6, new is current + 1");
         //gives newimg a value that is 1 more than current
         newImg = curImg + 1;
     }
 
-    if (curImg == 4) {
-        console.log("if current is 3, new is 1");
-        //document.getElementById("next_button").classList.add("noclickbutton");
+    if (curImg == 6) {
+        console.log("if current is 6, new is 1");
+
         newImg = 1;
     }
-    if (curImg > 4) {
-        console.log("if current is more than 3, current is 1");
-        //document.getElementById("next_button").classList.add("noclickbutton");
+    if (curImg > 6) {
+        console.log("if current is more than 6, current is 1");
+
         curImg = 1;
     }
     if (curImg == 0) {
-        console.log("if current is 0, current is 3");
-        //document.getElementById("prev_button").classList.add("noclickbutton");
-        curImg = 4;
+        console.log("if current is 0, current is 6");
+
+        curImg = 6;
     }
 
     //prints value of current and new img to console
@@ -68,18 +70,18 @@ function prevImage() {
 
     if (curImg == 1) {
         console.log("if current is 1, new is 3");
-        //document.getElementById("prev_button").classList.add("noclickbutton");
-        newImg = 4;
+
+        newImg = 6;
     }
 
     if (curImg == 0) {
         console.log("if current is 0, current is 3");
-        //document.getElementById("prev_button").classList.add("noclickbutton");
-        curImg = 4;
+
+        curImg = 6;
     }
-    if (curImg > 4) {
+    if (curImg > 6) {
         console.log("if curent is more than 3, current is 1");
-        //document.getElementById("next_button").classList.add("noclickbutton");
+
         curImg = 1;
     }
 
@@ -91,7 +93,6 @@ function prevImage() {
 
     document.querySelector("#dot" + curImg).classList.remove("activeDot"); //removes active dot class from previos
     document.querySelector("#dot" + newImg).classList.add("activeDot"); //adds active doc class to new img
-
 
     newImg--;
 
