@@ -26,7 +26,8 @@
 }
 
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'cracked_code-webfont';
     text-transform: uppercase;
 }
@@ -47,12 +48,26 @@ h2 {
 h3 {
     margin: 2rem;
     font-size: 2rem;
+
+    /*
+    border-color: greenyellow;*/
+}
+
+h4 {
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 p,
 li {
     font-family: 'px437_ibm_vga_8x16-webfont';
     font-size: 1.5rem;
+}
+
+p {
+    /*
+    margin-bottom: 25px;*/
+    margin: 25px;
 }
 
 
@@ -81,6 +96,38 @@ img {
 
 .col_2 {
     grid-column: 2;
+}
+
+/*Tema 3*/
+#triple_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    height: auto;
+}
+
+#emne {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#afsender {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#design {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#lightning_demo {
+    margin-top: 50px;
+}
+
+#splash_video {
+    border: solid;
+    border-color: lawngreen;
 }
 
 #spil {}
