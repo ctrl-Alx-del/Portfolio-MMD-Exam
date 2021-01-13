@@ -9,7 +9,7 @@ nav {
     padding: 1rem;
 }
 
-#toplink {
+.toplink {
     color: fuchsia;
     font-family: 'cracked_code-webfont';
     text-decoration: none;
@@ -364,7 +364,7 @@ body {
 
     }
 
-    #toplink {
+    .toplink {
         font-size: 3.5vw;
     }
 
