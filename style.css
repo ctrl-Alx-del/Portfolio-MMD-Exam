@@ -1,12 +1,43 @@
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /*
+    background-color: aqua;*/
+    height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#toplink {
+    color: fuchsia;
+    font-family: 'cracked_code-webfont';
+}
+
+a {
+    color: white;
+    /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -1px 0px fuchsia,
+        0px 1px fuchsia,
+        1px 0px aqua,
+        0px -1px aqua;
+}
+
 /* Gælder for hele dokumentet*/
 * {
     box-sizing: border-box;
     margin: auto;
-    background-color: black;
-    color: white;
 }
 
+
+
 /*fonts*/
+@font-face {
+    font-family: 'cracked_code-webfont';
+
+    src: url(fonts/cracked_code-webfont.woff) format('woff');
+}
+
 @font-face {
     font-family: 'px437_ibm_vga_8x16-webfont';
 
@@ -30,6 +61,10 @@ h3,
 h4 {
     font-family: 'cracked_code-webfont';
     text-transform: uppercase;
+    text-shadow: -1px 0px fuchsia,
+        0px 1px fuchsia,
+        1px 0px aqua,
+        0px -1px aqua;
 }
 
 h1 {
@@ -37,6 +72,10 @@ h1 {
     font-size: 10rem;
     text-align: center;
     margin: 3rem;
+    text-shadow: -1px 0px fuchsia,
+        0px 1px fuchsia,
+        1px 0px aqua,
+        0px -1px aqua;
 }
 
 h2 {
@@ -104,6 +143,27 @@ img {
     grid-template-columns: repeat(3, 1fr);
     position: absolute;
     height: auto;
+    overflow: hidden;
+}
+
+#survey_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    margin: 50px;
+    padding: 50px;
+    grid-gap: 50px;
+    height: 1500px;
+}
+
+#survey_wrapper {
+    height: 1500px;
+}
+
+.col_narrow {
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    margin-top: 0vw;
 }
 
 #emne {
@@ -130,9 +190,10 @@ img {
     border-color: lawngreen;
 }
 
-#spil {}
-
-#Tema_2 {}
+#spil {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 /*Tema 4*/
 #flex_container {
@@ -143,9 +204,32 @@ img {
     width: 30%;
 }
 
-body {}
+#test_wrapper {
+    margin-top: 86rem;
+}
 
-main {}
+#pie_charts {
+    border: solid;
+    border-color: lawngreen;
+    margin-bottom: 134rem;
+}
+
+#hjemmesider {
+    margin-bottom: 139rem;
+}
+
+#opsummering {
+    margin-bottom: 18rem;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#hjemmesider {
+    margin-bottom: 5rem;
+}
 
 /*Navigation*/
 .backToTop {
@@ -154,6 +238,21 @@ main {}
     position: fixed;
     left: 20px;
     bottom: 5px;
+}
+
+#styletile_v2,
+.slideshow,
+#temadok_img,
+#styletile_img,
+#aktivitetsdiagram_img,
+#spil {
+    border: solid;
+    border-color: lawngreen;
+}
+
+#undersoegelse {
+    margin-bottom: 17rem;
+    grid-column: 1;
 }
 
 /*Responsivitet*/
