@@ -350,6 +350,10 @@ body {
         font-size: 1.2rem;
     }
 
+    h1 {
+        font-size: 4rem;
+    }
+
     #asset_overskrift {
         margin-left: 1.2rem;
         font-size: 1.5rem;
