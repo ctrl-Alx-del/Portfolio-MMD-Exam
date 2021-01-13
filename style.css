@@ -120,7 +120,7 @@ img {
 #galleri {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row: 1fr;
+    grid-template-rows: 1fr;
     position: relative;
 }
 
@@ -207,6 +207,10 @@ img {
     position: absolute;
     height: auto;
     overflow: hidden;
+}
+
+#test_h3 {
+    margin-left: 5px;
 }
 
 #survey_container {
@@ -341,4 +345,62 @@ body {
 }
 
 /*Responsivitet*/
-@mediaquery (min-width: 500px) {}
+@media only screen and (max-width: 700px) {
+    a {
+        font-size: 1.2rem;
+    }
+
+    #asset_overskrift {
+        margin-left: 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    #test_h3 {
+        margin-top: 263rem;
+    }
+
+    #survey_h3 {
+        margin-top: -4rem;
+
+    }
+
+    #toplink {
+        font-size: 3.5vw;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    #galleri {
+        display: block;
+    }
+
+    .wide_container {
+        display: block;
+
+    }
+
+    #triple_container {
+        display: block;
+
+    }
+
+    #survey_container {
+        display: block;
+
+    }
+
+    #flex_container {
+        display: block;
+
+    }
+
+    #asset_container {
+        display: block;
+    }
+
+    #splash_video {
+        height: 40%;
+    }
+}
